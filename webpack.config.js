@@ -2,9 +2,9 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    //mode: development,
+    mode: 'development',
     entry: {
-        "Shared/global": './ClientApp/src/js/Shared/global.js',
+        //"Shared/global": './ClientApp/src/js/Shared/global.js',
         "Shared/layout": './ClientApp/src/js/Shared/layout.js',
     },
     output: {
@@ -18,7 +18,8 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [{ loader: MiniCssExtractPlugin.loader }, 'css-loader'],
+                //include: path.resolve(__dirname, './ClientApp/src/css/Shared/'),
+                use: [{ loader: MiniCssExtractPlugin.loader }, 'css-loader', /*'style-loader',*/ 'postcss-loader']
             },
             {
                 test: /\.(eot|woff(2)?|ttf|otf|svg)$/i,

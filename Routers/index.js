@@ -7,6 +7,7 @@ const port = process.env.BACKEND_PORT || 5000
 
 app.use('/dist', express.static(__dirname + '../../dist/'))
 app.use('/ClientApp', express.static(__dirname + '../../ClientApp/'))
+app.use('/assets', express.static(__dirname + '../../ClientApp/src/assets/'))
 
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '../Views/Shared/layout.html'))
