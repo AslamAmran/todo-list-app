@@ -6,6 +6,8 @@ module.exports = {
     entry: {
         //"Shared/global": './ClientApp/src/js/Shared/global.js',
         "Shared/layout": './ClientApp/src/js/Shared/layout.js',
+        "MyDay/MyDay": './ClientApp/src/js/MyDay/MyDay.js',
+        "Planned/Planned": './ClientApp/src/js/Planned/Planned.js',
     },
     output: {
         filename: 'js/[name].entry.js',
